@@ -1,3 +1,27 @@
+# Based on Requirements
+
+user can register using api
+user can login using api
+
+----------------
+
+author can create new post, delete post, update post using api
+author authorized to delete/create/modify using api
+author can commment using api
+
+user can read or search other posts using api, but can't modify
+user can comment using api
+user can like using api
+
+filter posts using api
+search posts using api
+
+-----------------
+
+
+
+
+
 # DailyBlog
 
 created github repo with readme

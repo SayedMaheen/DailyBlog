@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as CustomUserAdmin
-from bloguser.models import User 
+from bloguser.models import User
+from . import models 
 
 
 @admin.register(User)
@@ -13,3 +14,5 @@ class UserAdmin(CustomUserAdmin):
 
     )
 
+
+admin.site.register(models.BlogUser)
