@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from django.http import HttpResponse
 from rest_framework import status
+# from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView
 from rest_framework.decorators import api_view
 from rest_framework.generics import ListAPIView
@@ -31,7 +32,7 @@ def blog_list(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
        
 
-@api_view(['GET','PUT','PATCH'])
+@api_view(['GET','PUT','PATCH','DELETE'])
 def blog_content(request, id):
     post = get_object_or_404(BlogPost,pk=id)
     if request.method == 'GET':
@@ -47,3 +48,6 @@ def blog_content(request, id):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+    elif request.method == 'DELETE':
+        post.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
