@@ -51,3 +51,25 @@ Will Edit It later
 First Commit
 
 ----------------------
+
+#### Models
+
+First model: blogpost -> BlogPost
+
+- title
+- content
+- last_update
+
+bloguser -> BlogUser  
+
+
+-------------------
+
+Deleted -> likedapp, commentapp
+Created -> useractivity
+
+
+--------------
+
+- A customer can comment many times, on same post, if customer or post gets deleted, comment also get deleted
+- A customer can like a post one time, if customer or post get deleted the like disappears
