@@ -6,6 +6,7 @@ class BlogPost(models.Model):
     content = models.TextField(max_length=1020)
     last_update = models.DateTimeField(auto_now=True)
     author =  models.ForeignKey(BlogUser, on_delete=models.CASCADE)
+    
 
     def __str__(self) -> str:
         return self.title

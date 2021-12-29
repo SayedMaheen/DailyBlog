@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import BlogUser
+from .serializers import BlogUserSerializer
 
-# Create your views here.
+class BlogUserViewSet(ModelViewSet):
+    queryset = BlogUser.objects.all()
+    serializer_class = BlogUserSerializer
+    
+
